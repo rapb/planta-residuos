@@ -13,18 +13,15 @@ import java.util.HashSet;
  * @author Sammy Guergachi <sguergachi at gmail.com>
  */
 public class TCamionero {
-public class TCamoinero {
 private boolean senior;
   private  HashSet<Vehiculo>vehiculos ;
-    public TCamoinero(boolean senior) {
+    public TCamionero(boolean senior) {
         this.senior = senior;
     }
 
-    public TCamoinero() {
+    public TCamionero() {
     }
-public boolean asignaCamion(Vehiculo camion){
+public void asignaCamion(Vehiculo camion){
       
 }
-}
-
 }
