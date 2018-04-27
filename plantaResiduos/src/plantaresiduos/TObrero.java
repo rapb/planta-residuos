@@ -11,9 +11,14 @@ package plantaresiduos;
  */
 public class TObrero extends Trabajador implements Reparacion{
     
+    private boolean esSupervisor;
+
     public TObrero(String nif, String nombre, String apellidos, String telefono, String direccion) {
         super(nif, nombre, apellidos, telefono, direccion);
+        this.esSupervisor=esSupervisor;
     }
+    
+    
 
     @Override
     public void reparar() {
