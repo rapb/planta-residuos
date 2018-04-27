@@ -12,16 +12,14 @@ package plantaresiduos;
 public class Trabajador {
     
     private String nif, nombre, apellidos,telefono, direccion;
-    
-    
-    public Trabajador(String nif, String nombre, String apellidos, String telefono, String direccion) {
+    private boolean esSupervisor;
+
+    public Trabajador(String nif, String nombre, String apellidos, String telefono, String direccion, boolean esSupervisor) {
         this.nif = nif;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.telefono = telefono;
         this.direccion = direccion;
-    }
-
-    
-    
+        this.esSupervisor = esSupervisor;
+    }    
 }
