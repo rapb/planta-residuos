@@ -12,6 +12,7 @@ package plantaresiduos;
 public class Residuo {
     
     int id;
+    //F - Finales (están reparados)  |  R - Recuperables (se pueden reparar)  |  I - Indeterminado (No está claro que se pueda reparar)
     char estado;
     String descripcion;
 
@@ -23,5 +24,14 @@ public class Residuo {
         this.estado = estado;
         this.descripcion = descripcion;
     }
+
+    public void setEstado(char estado) {
+        this.estado = estado;
+    }
+
+    public int getId() {
+        return id;
+    }
+    
     
 }
