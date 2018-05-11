@@ -39,6 +39,12 @@ public class Almacen {
         
         residuos.add(r);
     }
+
+    public void listarResiduos(){
+        for (Residuo residuo : residuos) {
+            System.out.println(residuo.toString());
+        }
+    }
     
     
 }
