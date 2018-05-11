@@ -13,7 +13,7 @@ public class TObrero extends Trabajador implements Reparacion{
     
     private boolean esSupervisor;
 
-    public TObrero(String nif, String nombre, String apellidos, String telefono, String direccion) {
+    public TObrero(String nif, String nombre, String apellidos, String telefono, String direccion, boolean esSupervisor) {
         super(nif, nombre, apellidos, telefono, direccion);
         this.esSupervisor=esSupervisor;
     }
