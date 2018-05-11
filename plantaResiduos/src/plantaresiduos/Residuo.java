@@ -32,6 +32,13 @@ public class Residuo {
     public int getId() {
         return id;
     }
+
+    @Override
+    public String toString() {
+        return "Residuo: " + id 
+                + " Estado: " + estado 
+                + " Descripcion: " + descripcion;
+    }
     
     
 }
