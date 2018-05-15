@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author DAW111
  */
 public class Almacen {
-     Scanner Entrada=new Scanner(System.in);
+     Scanner Entrada=new Scanner(System.in); 
     
     private int id, capacidad;
     private String nombre, ubicacion;
@@ -25,7 +25,7 @@ public class Almacen {
         this.capacidad = capacidad;
         this.nombre = nombre;
         this.ubicacion = ubicacion;
-         residuos=new LinkedHashSet<>();
+        residuos=new LinkedHashSet<>();
     }
 
     public void anadirResiduo() throws IOException{
