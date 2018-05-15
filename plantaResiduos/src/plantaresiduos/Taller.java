@@ -5,6 +5,8 @@
  */
 package plantaresiduos;
 
+import java.util.LinkedHashSet;
+
 /**
  *
  * @author DAW121
@@ -12,5 +14,17 @@ package plantaresiduos;
 public class Taller {
     
     private String nombre;
+    private int maxResido[]=new int [100];
+    private LinkedHashSet<Reparacion> reparacion;
+
+    public Taller(String nombre, LinkedHashSet<Reparacion> reparacion) {
+        this.nombre = nombre;
+        this.reparacion = reparacion;
+    }
+
+   
+    
+    
+    
     
 }
