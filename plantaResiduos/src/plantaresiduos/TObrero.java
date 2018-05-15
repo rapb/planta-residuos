@@ -22,22 +22,7 @@ public class TObrero extends Trabajador{
         this.esSupervisor=esSupervisor;
     }
     
-    public void reparar(){
-        System.out.println("Introduzca el id del residuo:");
-        int id=Entrada.nextInt();
-        //Aquí lo que no se como ponerlo xDD
-        for  (Almacen.Residuo residuo : residuos {
-            if(id==residuo.getId()){
-                residuo.setEstado('R');
-                Calendar f=Calendar.getInstance(Locale.ITALY);
-                System.out.println("Introduzca la descripción de la reparación:");
-                String d=Entrada.nextLine();
-                Reparacion r=new Reparacion(cont,f,d);
-                //Aquí hay que poner el add para la lista de reparaciones.
-                
-            }
-        }
-    }
+    
 
             
         }
