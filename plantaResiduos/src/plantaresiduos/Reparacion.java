@@ -5,11 +5,24 @@
  */
 package plantaresiduos;
 
+import java.util.Calendar;
+
 /**
  *
- * @author DAW111
+ * @author Paula
  */
-public interface Reparacion {
+public class Reparacion {
     
-    abstract void reparar();
+    private int id;
+    private Calendar fecha;
+    private String desc;
+
+    public Reparacion(int id, Calendar fecha, String desc) {
+        this.id = id;
+        this.fecha = fecha;
+        this.desc = desc;
+    }
+    
+    
+    
 }
