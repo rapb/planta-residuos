@@ -9,7 +9,7 @@ package plantaresiduos;
  *
  * @author DAW111
  */
-public class TObrero extends Trabajador implements Reparacion{
+public class TObrero extends Trabajador{
     
     private boolean esSupervisor;
 
@@ -18,14 +18,17 @@ public class TObrero extends Trabajador implements Reparacion{
         this.esSupervisor=esSupervisor;
     }
     
-    
-
-    @Override
-    public void reparar() {
+    public void reparar(){
         System.out.println("Introduzca el id del residuo:");
-            
-        
+        int id=Entrada.nextInt();
+        //Aquí lo que no se como ponerlo xDD
+        for  (Almacen.Residuo residuo : residuos {
+            if(id==residuo.getId()){
+                residuo.setEstado('R');
+            }
         }
+    }
+
             
         }
     
