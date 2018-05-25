@@ -42,6 +42,6 @@ public class TOficiona extends Trabajador{
         Nomina n=new Nomina(id, mes, anio, cant);
         
         nominas.add(n);
-    }
+    } 
     
 }
