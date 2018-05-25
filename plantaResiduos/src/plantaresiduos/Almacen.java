@@ -34,6 +34,7 @@ public class Almacen {
         System.out.println("Introduzca el estado del residuo:");
         char estado=(char)System.in.read();
         System.out.println("Introduzca la descripción del residuo:");
+        Entrada.next();
         String desc=Entrada.nextLine();
         Residuo r=new Residuo(id, estado, desc);
         
