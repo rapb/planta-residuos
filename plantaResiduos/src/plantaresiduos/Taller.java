@@ -21,10 +21,15 @@ public class Taller {
         this.nombre = nombre;
         this.reparacion = reparacion;
     }
-
-   
     
-    
-    
+    public void reparar(int id){
+        LinkedHashSet<Residuo> r;
+        r=Almacen.getResiduos;
+        for (Residuo residuo : r) {
+            if(id==residuo.getId()){
+                residuo.setEstado('R');
+            }
+        }
+    }
     
 }
