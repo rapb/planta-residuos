@@ -5,6 +5,7 @@
  */
 package plantaresiduos;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -21,21 +22,28 @@ public class PlantaResiduos {
         almacenes=new ArrayList<>();
     }
     
-    public void crearAlmacen(){
+    public Almacen crearAlmacen(){
         System.out.println("Introduzca el id del almacen:");
         int id=Entrada.nextInt();
         System.out.println("Introduzca la capacidad del almacen:");
         int capa=Entrada.nextInt();
         System.out.println("Introduzca el nombre del almacen:");
+        Entrada.next();
         String nombre=Entrada.nextLine();
         System.out.println("Introduzca la descripcion del almacen:");
         String desc=Entrada.nextLine();
         Almacen a=new Almacen(id, capa, nombre, desc);
         almacenes.add(a);
+        return a;
     }
     
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args) throws IOException {
+       //PRUEBAS
+        PlantaResiduos p=new PlantaResiduos();
+        
+        Almacen a=p.crearAlmacen();
+        a.anadirResiduo();
+        
     }
     
 }
