@@ -38,12 +38,40 @@ public class PlantaResiduos {
     }
     
     public static void main(String[] args) throws IOException {
-       //PRUEBAS
+        Scanner Entrada=new Scanner(System.in);
         PlantaResiduos p=new PlantaResiduos();
+       //PRUEBAS
+//        PlantaResiduos p=new PlantaResiduos();
+//        
+//        Almacen a=p.crearAlmacen();
+//        a.anadirResiduo();
+        boolean salir=false;
+        int elec=0;
+        System.out.println("========   PLANTA DE RESIDUOS   ========");
         
-        Almacen a=p.crearAlmacen();
-        a.anadirResiduo();
-        
+        do{
+            System.out.println("***** MENÚ *****");
+            System.out.println("1. Crear almacen.");
+            System.out.println("2. Introducir residuo.");
+            System.out.println("3. Reparar residuo.");
+            System.out.println("4. Salir.");
+            System.out.println("Seleccione una opción.");
+            elec=Entrada.nextInt();
+            
+            switch(elec){
+                case 1:
+                    Almacen a= p.crearAlmacen();
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    salir=true;
+                    break;
+            }
+        }
+        while(salir);
     }
     
 }
