@@ -14,11 +14,13 @@ import java.util.Scanner;
  * @author DAW111
  */
 public class Almacen {
+
+    static LinkedHashSet<Residuo> getResiduos;
      Scanner Entrada=new Scanner(System.in); 
     
     private int id, capacidad;
     private String nombre, ubicacion;
-    private LinkedHashSet<Residuo> residuos;
+    public LinkedHashSet<Residuo> residuos;
 
     public Almacen(int id, int capacidad, String nombre, String ubicacion) {
         this.id = id;
@@ -26,6 +28,9 @@ public class Almacen {
         this.nombre = nombre;
         this.ubicacion = ubicacion;
         residuos=new LinkedHashSet<>();
+        for (Residuo residuo : residuos) {
+            
+        }
     }
 
     public void anadirResiduo() throws IOException{
@@ -45,6 +50,54 @@ public class Almacen {
         for (Residuo residuo : residuos) {
             System.out.println(residuo.toString());
         }
+    }
+
+    public Scanner getEntrada() {
+        return Entrada;
+    }
+
+    public void setEntrada(Scanner Entrada) {
+        this.Entrada = Entrada;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getCapacidad() {
+        return capacidad;
+    }
+
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+
+    public LinkedHashSet<Residuo> getResiduos() {
+        return residuos;
+    }
+
+    public void setResiduos(LinkedHashSet<Residuo> residuos) {
+        this.residuos = residuos;
     }
     
     
