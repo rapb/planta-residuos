@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author DAW121
+ *  @author Raquel Pérez, Sergio Arrey y Paula Estrada. Desarrollo de aplicaciones Web 1.
  */
 public class Nomina {
     
@@ -20,6 +20,13 @@ public class Nomina {
     private int anio;
     private double cant;
 
+    /**
+     * Constructor de la nómina.
+     * @param id - id identificador de la nómina.
+     * @param mes - mes de expedición.
+     * @param anio - año de expedición.
+     * @param cant - cantidad.
+     */
     public Nomina(int id, int mes, int anio, double cant) {
         this.id = id;
         this.mes = mes;
