@@ -6,8 +6,10 @@
 package plantaresiduos;
 
 /**
- *
- * @author DAW111
+ * 
+ * @author Paula Estrada
+ * 
+ * Esta excepción se produce cuando el estado introducido para el residuo no es válido.
  */
 public class EstadoDeResiduoException extends Exception{
 
