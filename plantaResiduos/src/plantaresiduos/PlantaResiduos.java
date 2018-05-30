@@ -35,7 +35,7 @@ public class PlantaResiduos {
 //        return a;
 //    }
     
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, EstadoDeResiduoException {
         Scanner Entrada=new Scanner(System.in);
         PlantaResiduos p=new PlantaResiduos();
         Almacen a=new Almacen(1, 100, "Almacen 1", "Torrelavega");
@@ -61,7 +61,7 @@ public class PlantaResiduos {
                         System.out.println("Introduzca el estado del residuo (F / I / R):");
                         estado=(char)System.in.read();
                         if (estado!='F' || estado!='I' || estado!='R'){
-                            System.out.println("Ese estado no és válido. Por favor elija entre F, I y R.");
+                            throw new EstadoDeResiduoException();
                         }
                         }
                     while (estado!='F' || estado!='I' || estado!='R');
