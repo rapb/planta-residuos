@@ -9,13 +9,21 @@ import java.util.*;
 
 /**
  *
- * @author DAW111
+ * @author Raquel Pérez, Sergio Arrey y Paula Estrada. Desarrollo de aplicaciones Web 1.
  */
-public class Trabajador {
+public class Trabajador implements Llegada{
     
     Scanner Entrada=new Scanner(System.in);
     private String nif, nombre, apellidos,telefono, direccion;
-
+    
+    /**
+     * Constructor.
+     * @param nif - del trabajador.
+     * @param nombre - del trabajador.
+     * @param apellidos - del trabajador.
+     * @param telefono - del trabajador.
+     * @param direccion  - del trabajador.
+     */
     public Trabajador(String nif, String nombre, String apellidos, String telefono, String direccion) {
         this.nif = nif;
         this.nombre = nombre;
@@ -24,10 +32,8 @@ public class Trabajador {
         this.direccion = direccion;
     }  
     
-    public void registrarLlegada(){
-        System.out.println("Identificador de residuo:");
-        int id= Entrada.nextInt();
-        System.out.println("Fecha de llegada:");
-
+    // N. D. PAULA: HAY QUE TRABAJAR EN ESTO. NO SÉ SI ES NECESARIO.
+    public void registrarLlegada(int id, Date fecha){
+        
     }
 }
