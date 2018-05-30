@@ -5,18 +5,27 @@
  */
 package plantaresiduos;
 
-import java.util.Calendar;
-import java.util.Locale;
+
 
 /**
  *
- * @author DAW111
+ * @author Raquel Pérez, Sergio Arrey y Paula Estrada. Desarrollo de aplicaciones Web 1.
  */
 public class TObrero extends Trabajador{
     
     private boolean esSupervisor;
-    private int cont=1;
-
+    
+    /**
+     * Constructor.
+     * Esta clase hereda de Trabajador.
+     * 
+     * @param nif - nif del trabajador. Heredado de Trabajador.
+     * @param nombre - nombre del trabajador. Heredado de Trabajador.
+     * @param apellidos - apellidos del trabajador. Heredado de Trabajador.
+     * @param telefono - teleono del trabajador. Heredado de Trabajador.
+     * @param direccion - dirección del trabajador. Heredado de Trabajador.
+     * @param esSupervisor - true si es supervisor, false si no.
+     */
     public TObrero(String nif, String nombre, String apellidos, String telefono, String direccion, boolean esSupervisor) {
         super(nif, nombre, apellidos, telefono, direccion);
         this.esSupervisor=esSupervisor;
