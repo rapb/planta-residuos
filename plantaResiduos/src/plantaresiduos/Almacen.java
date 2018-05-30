@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author DAW111
+ *  @author Raquel Pérez, Sergio Arrey y Paula Estrada. Desarrollo de aplicaciones Web 1.
  */
 public class Almacen {
 
@@ -21,7 +21,14 @@ public class Almacen {
     private int id, capacidad;
     private String nombre, ubicacion;
     public LinkedHashSet<Residuo> residuos;
-
+    
+    /**
+     * Constructor de almacen.
+     * @param id - identificador del almancen.
+     * @param capacidad - capacidad máxima del mismo.
+     * @param nombre - nombre del almacen.
+     * @param ubicacion - ubicación del almacen.
+     */
     public Almacen(int id, int capacidad, String nombre, String ubicacion) {
         this.id = id;
         this.capacidad = capacidad;
@@ -32,26 +39,28 @@ public class Almacen {
             
         }
     }
-
-    public void anadirResiduo() throws IOException{
-        System.out.println("Introduzca el id del residuo:");
-        int id=Entrada.nextInt();
-        System.out.println("Introduzca el estado del residuo:");
-        char estado=(char)System.in.read();
-        System.out.println("Introduzca la descripción del residuo:");
-        Entrada.next();
-        String desc=Entrada.nextLine();
+    /**
+     * Método para añadir residuos al almacen.
+     * @param id - id para el objeto residuo.
+     * @param estado - estado del mismo. 'F' para residuos finales, 'R' para recuperables e 'I' para indeterminados.
+     * @param desc - descripción del mismo.
+     */
+    public void anadirResiduo(int id, char estado, String desc){
+       
         Residuo r=new Residuo(id, estado, desc);
-        
+        //Tras instanciar el residuo, lo añadimos a la lista de residuos que hay en el almacen.
         residuos.add(r);
     }
-
+    /**
+     * Método para obtener una lista de todos los residuos, mediante el método toString desarrollado en la clase residuo.
+     */
     public void listarResiduos(){
         for (Residuo residuo : residuos) {
             System.out.println(residuo.toString());
         }
     }
-
+    
+    //AQUÍ ABAJO GETTERS Y SETTERS
     public Scanner getEntrada() {
         return Entrada;
     }
