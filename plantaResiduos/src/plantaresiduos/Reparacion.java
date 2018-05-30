@@ -9,14 +9,20 @@ import java.util.Calendar;
 
 /**
  *
- * @author Paula
+ * @author Raquel Pérez, Sergio Arrey y Paula Estrada. Desarrollo de aplicaciones Web 1.
  */
 public class Reparacion {
     
     private int id;
     private Calendar fecha;
     private String desc;
-
+    
+    /**
+     * 
+     * @param id - id de la reparación.
+     * @param fecha - fecha de ésta.
+     * @param desc - descripción de la misma.
+     */
     public Reparacion(int id, Calendar fecha, String desc) {
         this.id = id;
         this.fecha = fecha;
