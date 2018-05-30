@@ -10,7 +10,7 @@ import java.util.HashSet;
 
 /**
  * 
- * @author Sammy Guergachi <sguergachi at gmail.com>
+ * @author Raquel Pérez, Sergio Arrey y Paula Estrada. Desarrollo de aplicaciones Web 1.
  */
 public class Vehiculo {
     private String matricula,modelo;
@@ -18,6 +18,15 @@ public class Vehiculo {
     private boolean disponible;
   //  private TCamionero;
    // private  HashSet<TCamoinero>conductores ;
+    
+    /**
+     * Constructor
+     * @param matricula - del vehículo
+     * @param modelo- del vehículo
+     * @param numeroAñosOperativo- del vehículo
+     * @param estado- del vehículo
+     * @param disponible - true si sí, false si no.
+     */
     public Vehiculo(String matricula, String modelo, int numeroAñosOperativo, int estado, boolean disponible) {
         this.matricula = matricula;
         this.modelo = modelo;
@@ -25,6 +34,8 @@ public class Vehiculo {
         this.estado = estado;
         this.disponible = disponible;
     }
+    
+    // N. D. PAULA: HAY QUE REPASAR TODO ESTO DE ABAJO, QUE NO SÉ QUE ESTABA HACIENDO SERGIO JAJAJA
     public void conducir(){
     //    if()
         disponible=true;
