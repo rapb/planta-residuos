@@ -48,23 +48,33 @@ public class PlantaResiduos {
             System.out.println("***** MENÚ *****");
             System.out.println("1. Introducir residuo.");
             System.out.println("2. Reparar residuo.");
-            System.out.println("3. Salir.");
+            System.out.println("3. Listar residuos.");
+            System.out.println("4. Salir.");
             System.out.println("Seleccione una opción.");
             elec=Entrada.nextInt();
             
             switch(elec){
                 case 1:
+                    boolean est=false;
                     System.out.println("Introduzca el id del residuo:");
                     int id=Entrada.nextInt();
                     char estado;
                     do{
                         System.out.println("Introduzca el estado del residuo (F / I / R):");
-                        estado=(char)System.in.read();
-                        if (estado!='F' || estado!='I' || estado!='R'){
-                            throw new EstadoDeResiduoException();
+                        estado=(char)Entrada.next().charAt(0);
+                        System.out.println(estado);
+                        if (estado=='F' || estado=='f'){
+                            est=true;
                         }
+                        else if(estado=='R' || estado=='r'){
+                            est=true;
                         }
-                    while (estado!='F' || estado!='I' || estado!='R');
+                        else if(estado=='I' || estado=='i'){
+                            est=true;
+                        }
+                        else throw new EstadoDeResiduoException();
+                        }
+                    while (est!=true);
                     System.out.println("Introduzca la descripción del residuo:");
                     Entrada.next();
                     String desc=Entrada.nextLine();
@@ -74,11 +84,14 @@ public class PlantaResiduos {
                     
                     break;
                 case 3:
+                    a.listarResiduos();
+                    break;
+                case 4:
                     salir=true;
                     break;
             }
         }
-        while(salir);
+        while(salir!=true);
     }
     
 }
