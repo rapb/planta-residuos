@@ -27,11 +27,34 @@ public class Nomina {
      * @param anio - año de expedición.
      * @param cant - cantidad.
      */
-    public Nomina(int id, int mes, int anio, double cant) {
-        this.id = id;
-        this.mes = mes;
-        this.anio = anio;
-        this.cant = cant;
+    public Nomina(int id, int mes, int anio, double cant) throws Exception {
+//        this.id = id;
+//        this.mes = mes;
+//        this.anio = anio;
+//        this.cant = cant;
+        if (id<=0){
+            throw new Exception ("El ID no puede ser menor que 0.");
+        }else{
+            this.id=id;
+        }
+        
+        if (mes<1 || mes>12){
+            throw new Exception ("El mes debe ser un número comprendido entre 1 y 12.");
+        }else{
+            this.mes=mes;
+        }
+        
+        if (anio<0){
+            throw new Exception ("El año no debe ser menor que 0");
+        }else{
+            this.anio=anio;
+        }
+        
+        if (cant<0){
+            throw new Exception ("La cantidad no puede ser menor que 0.");
+        }else{
+            this.cant=cant;
+        }
     }
     
     
