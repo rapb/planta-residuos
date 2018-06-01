@@ -30,7 +30,15 @@ public class Vehiculo {
      * @param disponible - true si sí, false si no.
      */
     public Vehiculo(String matricula, String modelo, int numeroAñosOperativo, int estado, boolean disponible) {
-        this.matricula = matricula;
+        
+        if(matricula.length()==7){
+                String letras=matricula.substring(4, 6);
+                String numero=matricula.substring(0, 3);
+                
+                 this.matricula = matricula;
+        }else{
+            System.out.println("la matricula no tiene 7 caracteres");
+        }
         this.modelo = modelo;
         this.numeroAñosOperativo = numeroAñosOperativo;
         this.estado = estado;
