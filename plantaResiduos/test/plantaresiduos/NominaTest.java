@@ -38,9 +38,10 @@ public class NominaTest {
     }
 
     @Test
-    public void testSomeMethod() {
+    public void testSomeMethod(int id, int mes, int anio, double cant) {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
+        
     }
     
 }
