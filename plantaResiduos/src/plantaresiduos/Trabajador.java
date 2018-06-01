@@ -36,4 +36,36 @@ public class Trabajador implements Llegada{
     public void registrarLlegada(int id, Date fecha){
         
     }
+       public String getNif() {
+        return nif;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 97 * hash + Objects.hashCode(this.nif);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Trabajador other = (Trabajador) obj;
+        if (!Objects.equals(this.nif, other.nif)) {
+            return false;
+        }
+        return true;
+    }
 }

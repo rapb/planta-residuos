@@ -7,6 +7,7 @@
 package plantaresiduos;
 
 import java.util.HashSet;
+import java.util.Objects;
 
 /**
  * 
@@ -16,6 +17,7 @@ public class Vehiculo {
     private String matricula,modelo;
     private int numeroAñosOperativo,estado;
     private boolean disponible;
+    private  HashSet<TCamionero>conductores ;
   //  private TCamionero;
    // private  HashSet<TCamoinero>conductores ;
     
@@ -33,6 +35,7 @@ public class Vehiculo {
         this.numeroAñosOperativo = numeroAñosOperativo;
         this.estado = estado;
         this.disponible = disponible;
+        this.conductores=new HashSet<TCamionero>();
     }
     
     // N. D. PAULA: HAY QUE REPASAR TODO ESTO DE ABAJO, QUE NO SÉ QUE ESTABA HACIENDO SERGIO JAJAJA
@@ -43,7 +46,41 @@ public class Vehiculo {
    //public boolean anhadirConcuctor(TCamoinero conductor){
         
   //  }
-    public boolean generarVehiculo(){
-      return true;
+   public void anhadirConductor(TCamionero cam){
+       
+       conductores.add(cam);
+   }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 83 * hash + Objects.hashCode(this.matricula);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Vehiculo other = (Vehiculo) obj;
+        if (!Objects.equals(this.matricula, other.matricula)) {
+            return false;
+        }
+        return true;
+    }
+
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
     }
 }

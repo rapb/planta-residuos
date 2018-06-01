@@ -32,12 +32,15 @@ public class TCamionero extends Trabajador {
         super(nif, nombre, apellidos, telefono, direccion);
         this.senior = senior;
     }
+   
     
-    /**
-     * EN PROCESO
-     * @param camion 
-     */
+
+   
+    
+
     public void asignaCamion(Vehiculo camion){
-      
+      vehiculos.add(camion);
     }
+    
 }
+    

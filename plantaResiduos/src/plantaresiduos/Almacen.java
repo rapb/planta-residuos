@@ -6,6 +6,7 @@
 package plantaresiduos;
 
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Scanner;
 
@@ -21,7 +22,8 @@ public class Almacen {
     private int id, capacidad;
     private String nombre, ubicacion;
     public LinkedHashSet<Residuo> residuos;
-    
+    private HashSet<Trabajador> trabajadores;
+private HashSet<Vehiculo> vehiculos;
     /**
      * Constructor de almacen.
      * @param id - identificador del almancen.
@@ -35,6 +37,8 @@ public class Almacen {
         this.nombre = nombre;
         this.ubicacion = ubicacion;
         residuos=new LinkedHashSet<>();
+           trabajadores=new HashSet<>();
+         vehiculos=new HashSet<>();
         for (Residuo residuo : residuos) {
             
         }
@@ -109,5 +113,70 @@ public class Almacen {
         this.residuos = residuos;
     }
     
+      public void conducir(String matricula){
+        Vehiculo ve;
+        ve=this.buscarVehiculo(matricula);
+        ve.setDisponible(false);
+        
+    }
+    public void dejarVehiculo(String matricula){
+          Vehiculo ve;
+        ve=this.buscarVehiculo(matricula);
+        ve.setDisponible(true);
+        
+    }
+    public void asignarConductorVehiculo(String nif,String matricula){
+        Vehiculo ve;
+        ve=this.buscarVehiculo(matricula);
+        ve.anhadirConductor((TCamionero)this.buscarTrabajador(nif));
+    }
     
+    
+    public void asignaVehiculoConductor(String nif,String matricula){
+        TCamionero cam;
+        cam=(TCamionero)this.buscarTrabajador(nif);
+        cam.asignaCamion(this.buscarVehiculo(matricula));
+    }
+    
+    
+    public void anhadirVehiculo(String matricula, String modelo, int numeroAñosOperativo, int estado, boolean disponible){
+        vehiculos.add(new Vehiculo(matricula, modelo, numeroAñosOperativo,estado, disponible));
+    }
+    public void anhadirtrabajadorObrero(String nif, String nombre, String apellidos, String telefono, String direccion, boolean esSupervisor){
+        trabajadores.add(new TObrero(nif, nombre,apellidos,telefono, direccion,esSupervisor));
+    }
+    public void anhadirtrabajadorCamionero(boolean senior, String nif, String nombre, String apellidos, String telefono, String direccion){
+        trabajadores.add(new TCamionero(senior,nif,nombre,apellidos,telefono, direccion));
+    }
+    public void anhadirtrabajadorOficina(String nif, String nombre, String apellidos, String telefono, String direccion, String departamento){
+        trabajadores.add(new TOficiona(nif,nombre,apellidos,telefono,direccion,departamento));
+    }
+    public Trabajador buscarTrabajador(String nif){
+        Trabajador trab=null;
+        for (Trabajador trabajador : trabajadores) {
+            if(trabajador.getNif().equalsIgnoreCase(nif)){
+                if(trabajador instanceof TCamionero){
+                   trab= (TCamionero) trabajador;
+                }else{
+            if(trabajador instanceof TObrero){
+                     trab=(TObrero) trabajador;
+                }else{
+               trab=(TOficiona) trabajador;
+            }
+            }
+            
+            
+        }
+    }
+        return trab;
+}
+    public Vehiculo buscarVehiculo(String matricula){
+        Vehiculo vehi=null;
+        for (Vehiculo vehiculo : vehiculos) {
+            if(vehiculo.getMatricula().equalsIgnoreCase(matricula)){
+                vehi=vehiculo;
+            }
+        }
+        return vehi;
+    }
 }
