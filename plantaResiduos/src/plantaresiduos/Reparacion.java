@@ -17,6 +17,9 @@ public class Reparacion {
     private Calendar fecha;
     private String desc;
     
+    public Reparacion(){}
+    
+    
     /**
      * 
      * @param id - id de la reparación.
