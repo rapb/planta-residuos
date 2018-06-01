@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Vehiculo.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;plantaResiduos&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">plantaresiduos</a> &gt; <span class="el_source">Vehiculo.java</span></div><h1>Vehiculo.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package plantaresiduos;
+
+import java.util.HashSet;
+
+/**
+ * 
+ * @author Raquel Pérez, Sergio Arrey y Paula Estrada. Desarrollo de aplicaciones Web 1.
+ */
+public class Vehiculo {
+    private String matricula,modelo;
+    private int numeroAñosOperativo,estado;
+    private boolean disponible;
+  //  private TCamionero;
+   // private  HashSet&lt;TCamoinero&gt;conductores ;
+    
+    /**
+     * Constructor
+     * @param matricula - del vehículo
+     * @param modelo- del vehículo
+     * @param numeroAñosOperativo- del vehículo
+     * @param estado- del vehículo
+     * @param disponible - true si sí, false si no.
+     */
+<span class="nc" id="L30">    public Vehiculo(String matricula, String modelo, int numeroAñosOperativo, int estado, boolean disponible) {</span>
+<span class="nc" id="L31">        this.matricula = matricula;</span>
+<span class="nc" id="L32">        this.modelo = modelo;</span>
+<span class="nc" id="L33">        this.numeroAñosOperativo = numeroAñosOperativo;</span>
+<span class="nc" id="L34">        this.estado = estado;</span>
+<span class="nc" id="L35">        this.disponible = disponible;</span>
+<span class="nc" id="L36">    }</span>
+    
+    // N. D. PAULA: HAY QUE REPASAR TODO ESTO DE ABAJO, QUE NO SÉ QUE ESTABA HACIENDO SERGIO JAJAJA
+    public void conducir(){
+    //    if()
+<span class="nc" id="L41">        disponible=true;</span>
+<span class="nc" id="L42">    }</span>
+   //public boolean anhadirConcuctor(TCamoinero conductor){
+        
+  //  }
+    public boolean generarVehiculo(){
+<span class="nc" id="L47">      return true;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

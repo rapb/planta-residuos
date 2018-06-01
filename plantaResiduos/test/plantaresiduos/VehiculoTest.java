@@ -52,13 +52,73 @@ public class VehiculoTest {
     /**
      * Test of generarVehiculo method, of class Vehiculo.
      */
+
+
+    /**
+     * Test of anhadirConductor method, of class Vehiculo.
+     */
     @Test
-    public void testGenerarVehiculo() {
-        System.out.println("generarVehiculo");
+    public void testAnhadirConductor() {
+        System.out.println("anhadirConductor");
+        TCamionero cam = null;
+        Vehiculo instance = null;
+        instance.anhadirConductor(cam);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getMatricula method, of class Vehiculo.
+     */
+    @Test
+    public void testGetMatricula() {
+        System.out.println("getMatricula");
+        Vehiculo instance = null;
+        String expResult = "";
+        String result = instance.getMatricula();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of hashCode method, of class Vehiculo.
+     */
+    @Test
+    public void testHashCode() {
+        System.out.println("hashCode");
+        Vehiculo instance = null;
+        int expResult = 0;
+        int result = instance.hashCode();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of equals method, of class Vehiculo.
+     */
+    @Test
+    public void testEquals() {
+        System.out.println("equals");
+        Object obj = null;
         Vehiculo instance = null;
         boolean expResult = false;
-        boolean result = instance.generarVehiculo();
+        boolean result = instance.equals(obj);
         assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setDisponible method, of class Vehiculo.
+     */
+    @Test
+    public void testSetDisponible() {
+        System.out.println("setDisponible");
+        boolean disponible = false;
+        Vehiculo instance = null;
+        instance.setDisponible(disponible);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

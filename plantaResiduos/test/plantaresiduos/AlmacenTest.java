@@ -227,5 +227,160 @@ public class AlmacenTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+
+    /**
+     * Test of conducir method, of class Almacen.
+     */
+    @Test
+    public void testConducir() {
+        System.out.println("conducir");
+        String matricula = "";
+        Almacen instance = null;
+        instance.conducir(matricula);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of dejarVehiculo method, of class Almacen.
+     */
+    @Test
+    public void testDejarVehiculo() {
+        System.out.println("dejarVehiculo");
+        String matricula = "";
+        Almacen instance = null;
+        instance.dejarVehiculo(matricula);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of asignarConductorVehiculo method, of class Almacen.
+     */
+    @Test
+    public void testAsignarConductorVehiculo() {
+        System.out.println("asignarConductorVehiculo");
+        String nif = "";
+        String matricula = "";
+        Almacen instance = null;
+        instance.asignarConductorVehiculo(nif, matricula);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of asignaVehiculoConductor method, of class Almacen.
+     */
+    @Test
+    public void testAsignaVehiculoConductor() {
+        System.out.println("asignaVehiculoConductor");
+        String nif = "";
+        String matricula = "";
+        Almacen instance = null;
+        instance.asignaVehiculoConductor(nif, matricula);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of anhadirVehiculo method, of class Almacen.
+     */
+    @Test
+    public void testAnhadirVehiculo() {
+        System.out.println("anhadirVehiculo");
+        String matricula = "";
+        String modelo = "";
+        int numeroAñosOperativo = 0;
+        int estado = 0;
+        boolean disponible = false;
+        Almacen instance = null;
+        instance.anhadirVehiculo(matricula, modelo, numeroAñosOperativo, estado, disponible);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of anhadirtrabajadorObrero method, of class Almacen.
+     */
+    @Test
+    public void testAnhadirtrabajadorObrero() {
+        System.out.println("anhadirtrabajadorObrero");
+        String nif = "";
+        String nombre = "";
+        String apellidos = "";
+        String telefono = "";
+        String direccion = "";
+        boolean esSupervisor = false;
+        Almacen instance = null;
+        instance.anhadirtrabajadorObrero(nif, nombre, apellidos, telefono, direccion, esSupervisor);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of anhadirtrabajadorCamionero method, of class Almacen.
+     */
+    @Test
+    public void testAnhadirtrabajadorCamionero() {
+        System.out.println("anhadirtrabajadorCamionero");
+        boolean senior = false;
+        String nif = "";
+        String nombre = "";
+        String apellidos = "";
+        String telefono = "";
+        String direccion = "";
+        Almacen instance = null;
+        instance.anhadirtrabajadorCamionero(senior, nif, nombre, apellidos, telefono, direccion);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of anhadirtrabajadorOficina method, of class Almacen.
+     */
+    @Test
+    public void testAnhadirtrabajadorOficina() {
+        System.out.println("anhadirtrabajadorOficina");
+        String nif = "";
+        String nombre = "";
+        String apellidos = "";
+        String telefono = "";
+        String direccion = "";
+        String departamento = "";
+        Almacen instance = null;
+        instance.anhadirtrabajadorOficina(nif, nombre, apellidos, telefono, direccion, departamento);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of buscarTrabajador method, of class Almacen.
+     */
+    @Test
+    public void testBuscarTrabajador() {
+        System.out.println("buscarTrabajador");
+        String nif = "";
+        Almacen instance = null;
+        Trabajador expResult = null;
+        Trabajador result = instance.buscarTrabajador(nif);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of buscarVehiculo method, of class Almacen.
+     */
+    @Test
+    public void testBuscarVehiculo() {
+        System.out.println("buscarVehiculo");
+        String matricula = "";
+        Almacen instance = null;
+        Vehiculo expResult = null;
+        Vehiculo result = instance.buscarVehiculo(matricula);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
     
 }

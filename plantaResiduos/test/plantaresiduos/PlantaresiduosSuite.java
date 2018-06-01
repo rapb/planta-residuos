@@ -17,7 +17,7 @@ import org.junit.runners.Suite;
  * @author DAW111
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({plantaresiduos.AlmacenTest.class, plantaresiduos.ReparacionTest.class, plantaresiduos.EstadoDeResiduoExceptionTest.class, plantaresiduos.ResiduoTest.class, plantaresiduos.TCamioneroTest.class, plantaresiduos.TrabajadorTest.class, plantaresiduos.NominaTest.class, plantaresiduos.TOficionaTest.class, plantaresiduos.VehiculoTest.class, plantaresiduos.TallerTest.class, plantaresiduos.TObreroTest.class, plantaresiduos.LlegadaTest.class, plantaresiduos.PlantaResiduosTest.class})
+@Suite.SuiteClasses({ResiduoTest.class, LlegadaTest.class, PlantaResiduosTest.class, TrabajadorTest.class, NominaTest.class, EstadoDeResiduoExceptionTest.class, ReparacionTest.class, TallerTest.class, TCamioneroTest.class, TOficionaTest.class, AlmacenTest.class, VehiculoTest.class, TObreroTest.class})
 public class PlantaresiduosSuite {
 
     @BeforeClass

@@ -51,5 +51,62 @@ public class TrabajadorTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+
+    /**
+     * Test of getNif method, of class Trabajador.
+     */
+    @Test
+    public void testGetNif() {
+        System.out.println("getNif");
+        Trabajador instance = null;
+        String expResult = "";
+        String result = instance.getNif();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getNombre method, of class Trabajador.
+     */
+    @Test
+    public void testGetNombre() {
+        System.out.println("getNombre");
+        Trabajador instance = null;
+        String expResult = "";
+        String result = instance.getNombre();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of hashCode method, of class Trabajador.
+     */
+    @Test
+    public void testHashCode() {
+        System.out.println("hashCode");
+        Trabajador instance = null;
+        int expResult = 0;
+        int result = instance.hashCode();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of equals method, of class Trabajador.
+     */
+    @Test
+    public void testEquals() {
+        System.out.println("equals");
+        Object obj = null;
+        Trabajador instance = null;
+        boolean expResult = false;
+        boolean result = instance.equals(obj);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
     
 }

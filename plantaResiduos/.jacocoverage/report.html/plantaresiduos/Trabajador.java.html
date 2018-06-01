@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Trabajador.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;plantaResiduos&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">plantaresiduos</a> &gt; <span class="el_source">Trabajador.java</span></div><h1>Trabajador.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package plantaresiduos;
+
+import java.util.*;
+
+/**
+ *
+ * @author Raquel Pérez, Sergio Arrey y Paula Estrada. Desarrollo de aplicaciones Web 1.
+ */
+public class Trabajador implements Llegada{
+    
+<span class="nc" id="L16">    Scanner Entrada=new Scanner(System.in);</span>
+    private String nif, nombre, apellidos,telefono, direccion;
+    
+    /**
+     * Constructor.
+     * @param nif - del trabajador.
+     * @param nombre - del trabajador.
+     * @param apellidos - del trabajador.
+     * @param telefono - del trabajador.
+     * @param direccion  - del trabajador.
+     */
+<span class="nc" id="L27">    public Trabajador(String nif, String nombre, String apellidos, String telefono, String direccion) {</span>
+<span class="nc" id="L28">        this.nif = nif;</span>
+<span class="nc" id="L29">        this.nombre = nombre;</span>
+<span class="nc" id="L30">        this.apellidos = apellidos;</span>
+<span class="nc" id="L31">        this.telefono = telefono;</span>
+<span class="nc" id="L32">        this.direccion = direccion;</span>
+<span class="nc" id="L33">    }  </span>
+    
+    // N. D. PAULA: HAY QUE TRABAJAR EN ESTO. NO SÉ SI ES NECESARIO.
+    public void registrarLlegada(int id, Date fecha){
+        
+<span class="nc" id="L38">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
