@@ -31,17 +31,25 @@ private HashSet<Vehiculo> vehiculos;
      * @param nombre - nombre del almacen.
      * @param ubicacion - ubicación del almacen.
      */
-    public Almacen(int id, int capacidad, String nombre, String ubicacion) {
-        this.id = id;
-        this.capacidad = capacidad;
-        this.nombre = nombre;
-        this.ubicacion = ubicacion;
+    public Almacen(int id, int capacidad, String nombre, String ubicacion) throws Exception {
+         if(id<0){
+            throw new Exception("El id ha de ser mayor de 0.");
+        } else this.id = id;
+        if (capacidad>200){
+            throw new Exception("La capacidad máxima el 200");
+        }
+        else this.capacidad = capacidad;
+        if (nombre.length()>20){
+            throw new Exception("El nombre no puede tener mas de 20 caracteres");
+        }
+        else this.nombre = ubicacion;
+        if (this.ubicacion.length()>20){
+            throw new Exception("La ubicación no puede tener mas de 20 caracteres");
+        }
+        else this.ubicacion= ubicacion;
         residuos=new LinkedHashSet<>();
            trabajadores=new HashSet<>();
          vehiculos=new HashSet<>();
-        for (Residuo residuo : residuos) {
-            
-        }
     }
     /**
      * Método para añadir residuos al almacen.
@@ -49,7 +57,7 @@ private HashSet<Vehiculo> vehiculos;
      * @param estado - estado del mismo. 'F' para residuos finales, 'R' para recuperables e 'I' para indeterminados.
      * @param desc - descripción del mismo.
      */
-    public void anadirResiduo(int id, char estado, String desc){
+    public void anadirResiduo(int id, char estado, String desc) throws Exception{
        
         Residuo r=new Residuo(id, estado, desc);
         //Tras instanciar el residuo, lo añadimos a la lista de residuos que hay en el almacen.
