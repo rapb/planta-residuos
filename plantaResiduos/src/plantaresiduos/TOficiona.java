@@ -42,7 +42,7 @@ public class TOficiona extends Trabajador{
      * @param anio - año de ésta.
      * @param cant - cantidad de la misma.
      */
-    public void generarNomina(int id, int mes, int anio, int cant){
+    public void generarNomina(int id, int mes, int anio, int cant) throws Exception{
           //Hay que mover esto hayá donde se vaya a dar la opción de generar nómina.
           
 //        Scanner Entrada= new Scanner(System.in); 
