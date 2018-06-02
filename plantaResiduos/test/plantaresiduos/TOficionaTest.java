@@ -41,7 +41,7 @@ public class TOficionaTest {
      * Test of generarNomina method, of class TOficiona.
      */
     @Test
-    public void testGenerarNomina() {
+    public void testGenerarNomina() throws Exception {
         System.out.println("generarNomina");
         int id = 0;
         int mes = 0;
