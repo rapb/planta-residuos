@@ -43,7 +43,7 @@ public class AlmacenTest {
      * Test of anadirResiduo method, of class Almacen.
      */
     @Test
-    public void testAnadirResiduo() {
+    public void testAnadirResiduo() throws Exception {
         System.out.println("anadirResiduo");
         int id = 0;
         char estado = ' ';
