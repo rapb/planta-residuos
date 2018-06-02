@@ -38,7 +38,7 @@ public class PlantaResiduos {
 //        almacenes.add(a);
 //        return a;
 //    }
-    public static void main(String[] args) throws IOException, EstadoDeResiduoException {
+    public static void main(String[] args) throws IOException, EstadoDeResiduoException, Exception {
         Scanner Entrada = new Scanner(System.in);
         PlantaResiduos p = new PlantaResiduos();
         Almacen a = new Almacen(1, 100, "Almacen 1", "Torrelavega");
