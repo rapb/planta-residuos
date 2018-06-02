@@ -24,10 +24,29 @@ public class Residuo {
      * @param estado - estado de éste. F - Finales (están reparados)  |  R - Recuperables (se pueden reparar)  |  I - Indeterminado (No está claro que se pueda reparar)
      * @param descripcion - descripción del mismo.
      */
-    public Residuo(int id, char estado, String descripcion) {
-        this.id = id;
-        this.estado = estado;
+    public Residuo(int id, char estado, String descripcion) throws EstadoDeResiduoException, Exception {
+        if (id<=0){
+            throw new Exception("El id ha de ser mayor de 0.");
+        }
+        else{
+            this.id=id;
+        }
+        if (estado=='F' || estado=='f'){
+            this.estado=estado;
+                        }
+        else if(estado=='R' || estado=='r'){
+            this.estado=estado;
+                        }
+        else if(estado=='I' || estado=='i'){
+            this.estado=estado;
+                        }
+        else {throw new EstadoDeResiduoException();}
+        if (descripcion.length()<250){
+            throw new Exception("Descripción demasiado larga. Debe tener menos de 250 caracteres. ");
+        }
+        else{
         this.descripcion = descripcion;
+        }
     }
     
     //GETTERS, SETTERS y TOSTRING
