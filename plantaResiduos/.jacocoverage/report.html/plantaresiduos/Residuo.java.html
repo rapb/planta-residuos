@@ -24,19 +24,38 @@ public class Residuo {
      * @param estado - estado de éste. F - Finales (están reparados)  |  R - Recuperables (se pueden reparar)  |  I - Indeterminado (No está claro que se pueda reparar)
      * @param descripcion - descripción del mismo.
      */
-<span class="nc" id="L27">    public Residuo(int id, char estado, String descripcion) {</span>
-<span class="nc" id="L28">        this.id = id;</span>
-<span class="nc" id="L29">        this.estado = estado;</span>
-<span class="nc" id="L30">        this.descripcion = descripcion;</span>
-<span class="nc" id="L31">    }</span>
+<span class="nc" id="L27">    public Residuo(int id, char estado, String descripcion) throws EstadoDeResiduoException, Exception {</span>
+<span class="nc bnc" id="L28" title="All 2 branches missed.">        if (id&lt;=0){</span>
+<span class="nc" id="L29">            throw new Exception(&quot;El id ha de ser mayor de 0.&quot;);</span>
+        }
+        else{
+<span class="nc" id="L32">            this.id=id;</span>
+        }
+<span class="nc bnc" id="L34" title="All 4 branches missed.">        if (estado=='F' || estado=='f'){</span>
+<span class="nc" id="L35">            this.estado=estado;</span>
+                        }
+<span class="nc bnc" id="L37" title="All 4 branches missed.">        else if(estado=='R' || estado=='r'){</span>
+<span class="nc" id="L38">            this.estado=estado;</span>
+                        }
+<span class="nc bnc" id="L40" title="All 4 branches missed.">        else if(estado=='I' || estado=='i'){</span>
+<span class="nc" id="L41">            this.estado=estado;</span>
+                        }
+<span class="nc" id="L43">        else {throw new EstadoDeResiduoException();}</span>
+<span class="nc bnc" id="L44" title="All 2 branches missed.">        if (descripcion.length()&lt;250){</span>
+<span class="nc" id="L45">            throw new Exception(&quot;Descripción demasiado larga. Debe tener menos de 250 caracteres. &quot;);</span>
+        }
+        else{
+<span class="nc" id="L48">        this.descripcion = descripcion;</span>
+        }
+<span class="nc" id="L50">    }</span>
     
     //GETTERS, SETTERS y TOSTRING
     public void setEstado(char estado) {
-<span class="fc" id="L35">        this.estado = estado;</span>
-<span class="fc" id="L36">    }</span>
+<span class="fc" id="L54">        this.estado = estado;</span>
+<span class="fc" id="L55">    }</span>
 
     public int getId() {
-<span class="fc" id="L39">        return id;</span>
+<span class="fc" id="L58">        return id;</span>
     }
     
     /**
@@ -45,7 +64,7 @@ public class Residuo {
      */
     @Override
     public String toString() {
-<span class="fc" id="L48">        return &quot;Residuo: &quot; + id </span>
+<span class="fc" id="L67">        return &quot;Residuo: &quot; + id </span>
                 + &quot; Estado: &quot; + estado 
                 + &quot; Descripcion: &quot; + descripcion;
     }

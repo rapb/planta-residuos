@@ -28,8 +28,10 @@ public class TOficiona extends Trabajador{
      * @param telefono - teleono del trabajador. Heredado de Trabajador.
      * @param direccion - dirección del trabajador. Heredado de Trabajador.
      * @param departamento - departamento en el que trabaja.
+     * 
+     * @throws java.lang.Exception
      */
-    public TOficiona(String nif, String nombre, String apellidos, String telefono, String direccion, String departamento) {
+    public TOficiona(String nif, String nombre, String apellidos, String telefono, String direccion, String departamento)throws Exception {
         super(nif, nombre, apellidos, telefono, direccion);
         this.departamento=departamento;
         nominas=new LinkedHashSet<>();

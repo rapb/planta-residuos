@@ -25,11 +25,12 @@ public class TObrero extends Trabajador{
      * @param telefono - teleono del trabajador. Heredado de Trabajador.
      * @param direccion - dirección del trabajador. Heredado de Trabajador.
      * @param esSupervisor - true si es supervisor, false si no.
+     * @throws java.lang.Exception
      */
-    public TObrero(String nif, String nombre, String apellidos, String telefono, String direccion, boolean esSupervisor) {
-<span class="nc" id="L30">        super(nif, nombre, apellidos, telefono, direccion);</span>
-<span class="nc" id="L31">        this.esSupervisor=esSupervisor;</span>
-<span class="nc" id="L32">    }</span>
+    public TObrero(String nif, String nombre, String apellidos, String telefono, String direccion, boolean esSupervisor) throws Exception{
+<span class="nc" id="L31">        super(nif, nombre, apellidos, telefono, direccion);</span>
+<span class="nc" id="L32">        this.esSupervisor=esSupervisor;</span>
+<span class="nc" id="L33">    }</span>
     
     
 

@@ -23,6 +23,8 @@ public class Trabajador implements Llegada{
      * @param apellidos - del trabajador.
      * @param telefono - del trabajador.
      * @param direccion  - del trabajador.
+     * 
+     * @throws java.lang.Exception
      */
     public Trabajador(String nif, String nombre, String apellidos, String telefono, String direccion) throws Exception {
         this.nif = nif;

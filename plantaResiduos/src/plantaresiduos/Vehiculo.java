@@ -29,18 +29,36 @@ public class Vehiculo {
      * @param estado- del vehículo
      * @param disponible - true si sí, false si no.
      */
-    public Vehiculo(String matricula, String modelo, int numeroAñosOperativo, int estado, boolean disponible) {
-        
+    public Vehiculo(String matricula, String modelo, int numeroAñosOperativo, int estado, boolean disponible)throws Exception {
+        char dig;
+        boolean es=true;
         if(matricula.length()==7){
                 String letras=matricula.substring(4, 6);
+                for(int i=0;i<letras.length();i++){
+                   dig= letras.charAt(i);
+                   if(Character.isLetter(dig)!=true){
+                       es=false;
+                   }
+                }
                 String numero=matricula.substring(0, 3);
-                
+                  for(int i=0;i<numero.length();i++){
+                   dig= numero.charAt(i);
+                   if(Character.isLetter(dig)!=true){
+                       es=false;
+                   }
+                  }
+                if(es==true){
                  this.matricula = matricula;
+                }
         }else{
-            System.out.println("la matricula no tiene 7 caracteres");
+              throw new Exception("la matricula no tiene 7 caracteres");
         }
         this.modelo = modelo;
+        if(numeroAñosOperativo<20 || numeroAñosOperativo>0){
         this.numeroAñosOperativo = numeroAñosOperativo;
+        } else{
+                 throw new Exception("el numero de años operativo no es logico");
+                }
         this.estado = estado;
         this.disponible = disponible;
         this.conductores=new HashSet<TCamionero>();

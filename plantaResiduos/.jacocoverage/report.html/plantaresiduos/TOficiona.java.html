@@ -28,12 +28,14 @@ public class TOficiona extends Trabajador{
      * @param telefono - teleono del trabajador. Heredado de Trabajador.
      * @param direccion - dirección del trabajador. Heredado de Trabajador.
      * @param departamento - departamento en el que trabaja.
+     * 
+     * @throws java.lang.Exception
      */
-    public TOficiona(String nif, String nombre, String apellidos, String telefono, String direccion, String departamento) {
-<span class="nc" id="L33">        super(nif, nombre, apellidos, telefono, direccion);</span>
-<span class="nc" id="L34">        this.departamento=departamento;</span>
-<span class="nc" id="L35">        nominas=new LinkedHashSet&lt;&gt;();</span>
-<span class="nc" id="L36">    }</span>
+    public TOficiona(String nif, String nombre, String apellidos, String telefono, String direccion, String departamento)throws Exception {
+<span class="nc" id="L35">        super(nif, nombre, apellidos, telefono, direccion);</span>
+<span class="nc" id="L36">        this.departamento=departamento;</span>
+<span class="nc" id="L37">        nominas=new LinkedHashSet&lt;&gt;();</span>
+<span class="nc" id="L38">    }</span>
     
     /**
      * Método para generar nóminas.
@@ -42,7 +44,7 @@ public class TOficiona extends Trabajador{
      * @param anio - año de ésta.
      * @param cant - cantidad de la misma.
      */
-    public void generarNomina(int id, int mes, int anio, int cant){
+    public void generarNomina(int id, int mes, int anio, int cant) throws Exception{
           //Hay que mover esto hayá donde se vaya a dar la opción de generar nómina.
           
 //        Scanner Entrada= new Scanner(System.in); 
@@ -59,10 +61,10 @@ public class TOficiona extends Trabajador{
 //        System.out.println(&quot;Introduzca la cantidad&quot;);
 //        double cant=Entrada.nextDouble();
         
-<span class="nc" id="L62">        Nomina n=new Nomina(id, mes, anio, cant);</span>
+<span class="nc" id="L64">        Nomina n=new Nomina(id, mes, anio, cant);</span>
         //Instancia la nómina, y la añade a la lista de nóminas.
-<span class="nc" id="L64">        nominas.add(n);</span>
-<span class="nc" id="L65">    } </span>
+<span class="nc" id="L66">        nominas.add(n);</span>
+<span class="nc" id="L67">    } </span>
     
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

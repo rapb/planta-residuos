@@ -25,8 +25,9 @@ public class TObrero extends Trabajador{
      * @param telefono - teleono del trabajador. Heredado de Trabajador.
      * @param direccion - dirección del trabajador. Heredado de Trabajador.
      * @param esSupervisor - true si es supervisor, false si no.
+     * @throws java.lang.Exception
      */
-    public TObrero(String nif, String nombre, String apellidos, String telefono, String direccion, boolean esSupervisor) {
+    public TObrero(String nif, String nombre, String apellidos, String telefono, String direccion, boolean esSupervisor) throws Exception{
         super(nif, nombre, apellidos, telefono, direccion);
         this.esSupervisor=esSupervisor;
     }

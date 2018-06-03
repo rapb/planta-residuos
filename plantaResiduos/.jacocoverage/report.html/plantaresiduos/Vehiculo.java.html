@@ -7,6 +7,7 @@
 package plantaresiduos;
 
 import java.util.HashSet;
+import java.util.Objects;
 
 /**
  * 
@@ -16,6 +17,7 @@ public class Vehiculo {
     private String matricula,modelo;
     private int numeroAñosOperativo,estado;
     private boolean disponible;
+    private  HashSet&lt;TCamionero&gt;conductores ;
   //  private TCamionero;
    // private  HashSet&lt;TCamoinero&gt;conductores ;
     
@@ -27,24 +29,85 @@ public class Vehiculo {
      * @param estado- del vehículo
      * @param disponible - true si sí, false si no.
      */
-<span class="nc" id="L30">    public Vehiculo(String matricula, String modelo, int numeroAñosOperativo, int estado, boolean disponible) {</span>
-<span class="nc" id="L31">        this.matricula = matricula;</span>
-<span class="nc" id="L32">        this.modelo = modelo;</span>
-<span class="nc" id="L33">        this.numeroAñosOperativo = numeroAñosOperativo;</span>
-<span class="nc" id="L34">        this.estado = estado;</span>
-<span class="nc" id="L35">        this.disponible = disponible;</span>
-<span class="nc" id="L36">    }</span>
+<span class="nc" id="L32">    public Vehiculo(String matricula, String modelo, int numeroAñosOperativo, int estado, boolean disponible)throws Exception {</span>
+        char dig;
+<span class="nc" id="L34">        boolean es=true;</span>
+<span class="nc bnc" id="L35" title="All 2 branches missed.">        if(matricula.length()==7){</span>
+<span class="nc" id="L36">                String letras=matricula.substring(4, 6);</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">                for(int i=0;i&lt;letras.length();i++){</span>
+<span class="nc" id="L38">                   dig= letras.charAt(i);</span>
+<span class="nc bnc" id="L39" title="All 2 branches missed.">                   if(Character.isLetter(dig)!=true){</span>
+<span class="nc" id="L40">                       es=false;</span>
+                   }
+                }
+<span class="nc" id="L43">                String numero=matricula.substring(0, 3);</span>
+<span class="nc bnc" id="L44" title="All 2 branches missed.">                  for(int i=0;i&lt;numero.length();i++){</span>
+<span class="nc" id="L45">                   dig= numero.charAt(i);</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">                   if(Character.isLetter(dig)!=true){</span>
+<span class="nc" id="L47">                       es=false;</span>
+                   }
+                  }
+<span class="nc bnc" id="L50" title="All 2 branches missed.">                if(es==true){</span>
+<span class="nc" id="L51">                 this.matricula = matricula;</span>
+                }
+<span class="nc" id="L53">        }else{</span>
+<span class="nc" id="L54">              throw new Exception(&quot;la matricula no tiene 7 caracteres&quot;);</span>
+        }
+<span class="nc" id="L56">        this.modelo = modelo;</span>
+<span class="nc bnc" id="L57" title="All 4 branches missed.">        if(numeroAñosOperativo&lt;20 || numeroAñosOperativo&gt;0){</span>
+<span class="nc" id="L58">        this.numeroAñosOperativo = numeroAñosOperativo;</span>
+        } else{
+<span class="nc" id="L60">                 throw new Exception(&quot;el numero de años operativo no es logico&quot;);</span>
+                }
+<span class="nc" id="L62">        this.estado = estado;</span>
+<span class="nc" id="L63">        this.disponible = disponible;</span>
+<span class="nc" id="L64">        this.conductores=new HashSet&lt;TCamionero&gt;();</span>
+<span class="nc" id="L65">    }</span>
     
     // N. D. PAULA: HAY QUE REPASAR TODO ESTO DE ABAJO, QUE NO SÉ QUE ESTABA HACIENDO SERGIO JAJAJA
     public void conducir(){
     //    if()
-<span class="nc" id="L41">        disponible=true;</span>
-<span class="nc" id="L42">    }</span>
+<span class="nc" id="L70">        disponible=true;</span>
+<span class="nc" id="L71">    }</span>
    //public boolean anhadirConcuctor(TCamoinero conductor){
         
   //  }
-    public boolean generarVehiculo(){
-<span class="nc" id="L47">      return true;</span>
+   public void anhadirConductor(TCamionero cam){
+       
+<span class="nc" id="L77">       conductores.add(cam);</span>
+<span class="nc" id="L78">   }</span>
+
+    public String getMatricula() {
+<span class="nc" id="L81">        return matricula;</span>
     }
+
+    @Override
+    public int hashCode() {
+<span class="nc" id="L86">        int hash = 5;</span>
+<span class="nc" id="L87">        hash = 83 * hash + Objects.hashCode(this.matricula);</span>
+<span class="nc" id="L88">        return hash;</span>
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+<span class="nc bnc" id="L93" title="All 2 branches missed.">        if (this == obj) {</span>
+<span class="nc" id="L94">            return true;</span>
+        }
+<span class="nc bnc" id="L96" title="All 2 branches missed.">        if (obj == null) {</span>
+<span class="nc" id="L97">            return false;</span>
+        }
+<span class="nc bnc" id="L99" title="All 2 branches missed.">        if (getClass() != obj.getClass()) {</span>
+<span class="nc" id="L100">            return false;</span>
+        }
+<span class="nc" id="L102">        final Vehiculo other = (Vehiculo) obj;</span>
+<span class="nc bnc" id="L103" title="All 2 branches missed.">        if (!Objects.equals(this.matricula, other.matricula)) {</span>
+<span class="nc" id="L104">            return false;</span>
+        }
+<span class="nc" id="L106">        return true;</span>
+    }
+
+    public void setDisponible(boolean disponible) {
+<span class="nc" id="L110">        this.disponible = disponible;</span>
+<span class="nc" id="L111">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

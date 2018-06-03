@@ -27,8 +27,9 @@ public class TCamionero extends Trabajador {
      * @param apellidos - apellidos del trabajador. Heredado de Trabajador.
      * @param telefono - teleono del trabajador. Heredado de Trabajador.
      * @param direccion - dirección del trabajador. Heredado de Trabajador.
+     * @throws java.lang.Exception
      */
-    public TCamionero(boolean senior, String nif, String nombre, String apellidos, String telefono, String direccion) {
+    public TCamionero(boolean senior, String nif, String nombre, String apellidos, String telefono, String direccion) throws Exception{
         super(nif, nombre, apellidos, telefono, direccion);
         this.senior = senior;
     }

@@ -23,18 +23,68 @@ public class Trabajador implements Llegada{
      * @param apellidos - del trabajador.
      * @param telefono - del trabajador.
      * @param direccion  - del trabajador.
+     * 
+     * @throws java.lang.Exception
      */
-<span class="nc" id="L27">    public Trabajador(String nif, String nombre, String apellidos, String telefono, String direccion) {</span>
-<span class="nc" id="L28">        this.nif = nif;</span>
-<span class="nc" id="L29">        this.nombre = nombre;</span>
-<span class="nc" id="L30">        this.apellidos = apellidos;</span>
-<span class="nc" id="L31">        this.telefono = telefono;</span>
-<span class="nc" id="L32">        this.direccion = direccion;</span>
-<span class="nc" id="L33">    }  </span>
+<span class="nc" id="L29">    public Trabajador(String nif, String nombre, String apellidos, String telefono, String direccion) throws Exception {</span>
+<span class="nc" id="L30">        this.nif = nif;</span>
+<span class="nc" id="L31">        this.nombre = nombre;</span>
+<span class="nc" id="L32">        this.apellidos = apellidos;</span>
+<span class="nc" id="L33">        this.telefono = telefono;</span>
+<span class="nc" id="L34">        this.direccion = direccion;</span>
+        
+<span class="nc bnc" id="L36" title="All 2 branches missed.">        if(nif.length()!=9){            </span>
+<span class="nc" id="L37">            throw new Exception (&quot;El NIF debe tener 9 caracteres.&quot;);                 </span>
+<span class="nc" id="L38">        } else this.nif = nif;</span>
+        
+<span class="nc bnc" id="L40" title="All 2 branches missed.">        if (nombre.length()&gt;20){</span>
+<span class="nc" id="L41">            throw new Exception(&quot;El nombre no puede tener mas de 20 caracteres.&quot;);</span>
+<span class="nc" id="L42">        } else this.nombre = nombre;</span>
+        
+<span class="nc bnc" id="L44" title="All 2 branches missed.">        if (apellidos.length()&gt;35){</span>
+<span class="nc" id="L45">            throw new Exception(&quot;Los apellidos no pueden tener más de 30 caracteres.&quot;);</span>
+<span class="nc" id="L46">        } else this.apellidos=apellidos;</span>
+        
+<span class="nc bnc" id="L48" title="All 4 branches missed.">        if (telefono.length()&gt;9 || telefono.length()&lt;0){</span>
+<span class="nc" id="L49">            throw new Exception(&quot;El teléfono debe tener 9 dígitos&quot;);</span>
+<span class="nc" id="L50">        } else this.telefono = telefono;</span>
+<span class="nc" id="L51">    }  </span>
     
     // N. D. PAULA: HAY QUE TRABAJAR EN ESTO. NO SÉ SI ES NECESARIO.
     public void registrarLlegada(int id, Date fecha){
         
-<span class="nc" id="L38">    }</span>
+<span class="nc" id="L56">    }</span>
+       public String getNif() {
+<span class="nc" id="L58">        return nif;</span>
+    }
+
+    public String getNombre() {
+<span class="nc" id="L62">        return nombre;</span>
+    }
+
+    @Override
+    public int hashCode() {
+<span class="nc" id="L67">        int hash = 7;</span>
+<span class="nc" id="L68">        hash = 97 * hash + Objects.hashCode(this.nif);</span>
+<span class="nc" id="L69">        return hash;</span>
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+<span class="nc bnc" id="L74" title="All 2 branches missed.">        if (this == obj) {</span>
+<span class="nc" id="L75">            return true;</span>
+        }
+<span class="nc bnc" id="L77" title="All 2 branches missed.">        if (obj == null) {</span>
+<span class="nc" id="L78">            return false;</span>
+        }
+<span class="nc bnc" id="L80" title="All 2 branches missed.">        if (getClass() != obj.getClass()) {</span>
+<span class="nc" id="L81">            return false;</span>
+        }
+<span class="nc" id="L83">        final Trabajador other = (Trabajador) obj;</span>
+<span class="nc bnc" id="L84" title="All 2 branches missed.">        if (!Objects.equals(this.nif, other.nif)) {</span>
+<span class="nc" id="L85">            return false;</span>
+        }
+<span class="nc" id="L87">        return true;</span>
+    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

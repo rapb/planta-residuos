@@ -27,18 +27,22 @@ public class TCamionero extends Trabajador {
      * @param apellidos - apellidos del trabajador. Heredado de Trabajador.
      * @param telefono - teleono del trabajador. Heredado de Trabajador.
      * @param direccion - dirección del trabajador. Heredado de Trabajador.
+     * @throws java.lang.Exception
      */
-    public TCamionero(boolean senior, String nif, String nombre, String apellidos, String telefono, String direccion) {
-<span class="nc" id="L32">        super(nif, nombre, apellidos, telefono, direccion);</span>
-<span class="nc" id="L33">        this.senior = senior;</span>
-<span class="nc" id="L34">    }</span>
+    public TCamionero(boolean senior, String nif, String nombre, String apellidos, String telefono, String direccion) throws Exception{
+<span class="nc" id="L33">        super(nif, nombre, apellidos, telefono, direccion);</span>
+<span class="nc" id="L34">        this.senior = senior;</span>
+<span class="nc" id="L35">    }</span>
+   
     
-    /**
-     * EN PROCESO
-     * @param camion 
-     */
+
+   
+    
+
     public void asignaCamion(Vehiculo camion){
-      
-<span class="nc" id="L42">    }</span>
+<span class="nc" id="L43">      vehiculos.add(camion);</span>
+<span class="nc" id="L44">    }</span>
+    
 }
+    
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
