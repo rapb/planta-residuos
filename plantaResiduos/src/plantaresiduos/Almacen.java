@@ -157,7 +157,7 @@ public class Almacen {
         trabajadores.add(new TCamionero(senior,nif,nombre,apellidos,telefono, direccion));
     }
     public void anhadirTrabajadorOficina(String nif, String nombre, String apellidos, String telefono, String direccion, String departamento) throws Exception{
-        trabajadores.add(new TOficiona(nif,nombre,apellidos,telefono,direccion,departamento));
+        trabajadores.add(new TOficina(nif,nombre,apellidos,telefono,direccion,departamento));
     }
     public Trabajador buscarTrabajador(String nif){
         Trabajador trab=null;
@@ -169,7 +169,7 @@ public class Almacen {
             if(trabajador instanceof TObrero){
                      trab=(TObrero) trabajador;
                 }else{
-               trab=(TOficiona) trabajador;
+               trab=(TOficina) trabajador;
             }
             }
             
