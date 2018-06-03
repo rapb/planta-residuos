@@ -24,12 +24,28 @@ public class Trabajador implements Llegada{
      * @param telefono - del trabajador.
      * @param direccion  - del trabajador.
      */
-    public Trabajador(String nif, String nombre, String apellidos, String telefono, String direccion) {
+    public Trabajador(String nif, String nombre, String apellidos, String telefono, String direccion) throws Exception {
         this.nif = nif;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.telefono = telefono;
         this.direccion = direccion;
+        
+        if(nif.length()!=9){            
+            throw new Exception ("El NIF debe tener 9 caracteres.");                 
+        } else this.nif = nif;
+        
+        if (nombre.length()>20){
+            throw new Exception("El nombre no puede tener mas de 20 caracteres.");
+        } else this.nombre = nombre;
+        
+        if (apellidos.length()>35){
+            throw new Exception("Los apellidos no pueden tener más de 30 caracteres.");
+        } else this.apellidos=apellidos;
+        
+        if (telefono.length()>9 || telefono.length()<0){
+            throw new Exception("El teléfono debe tener 9 dígitos");
+        } else this.telefono = telefono;
     }  
     
     // N. D. PAULA: HAY QUE TRABAJAR EN ESTO. NO SÉ SI ES NECESARIO.
