@@ -17,7 +17,7 @@ public class PlantaResiduos {
     //private ArrayList<Almacen> almacenes;
     Scanner Entrada = new Scanner(System.in);
     static String matricula, modelo, resp, nif;
-    static int numeroAñosOperativo, estado;
+    static int numeroAñosOperativo, estado, id, mes, anio,cant;
     static boolean disponible;
 
     public PlantaResiduos() {
@@ -42,6 +42,7 @@ public class PlantaResiduos {
         Scanner Entrada = new Scanner(System.in);
         PlantaResiduos p = new PlantaResiduos();
         Almacen a = new Almacen(1, 100, "Almacen 1", "Torrelavega");
+        TOficina ofi = new TOficina("12345678A","Ana","Fernández","677777777","Calle de los Álamos","Gerstión");
         Taller t1=new Taller("Taller 1");
         Taller t2=new Taller("Taller 2");
 
@@ -54,11 +55,12 @@ public class PlantaResiduos {
             System.out.println("1. Introducir residuo.");
             System.out.println("2. Reparar residuo.");
             System.out.println("3. Listar residuos.");
-            System.out.println("4. Añadir trabajador");
-            System.out.println("5. Añadir vehiculo");
-            System.out.println("6. Asignar vehiculo a camionero");
-            System.out.println("7. Asignar camionero a vehiculo");
-            System.out.println("8. Salir.");
+            System.out.println("4. Añadir trabajador.");
+            System.out.println("5. Añadir vehiculo.");
+            System.out.println("6. Asignar vehiculo a camionero.");
+            System.out.println("7. Asignar camionero a vehiculo.");
+            System.out.println("8. Generar nómina.");
+            System.out.println("9. Salir.");
             System.out.println("Seleccione una opción.");
 
             elec = Entrada.nextInt();
@@ -188,8 +190,21 @@ public class PlantaResiduos {
                     a.asignarConductorVehiculo(nif, matricula);
 
                     break;
-
+                    
                 case 8:
+                    System.out.println("Introduzca el identificador de la nómina:");
+                    id=Entrada.nextInt();
+                    System.out.println("Introduzca el mes de la nómina:");
+                    mes=Entrada.nextInt();
+                    System.out.println("Introduzca el año de la nómina:");
+                    anio=Entrada.nextInt();
+                    System.out.println("Introduzca la cantidad de la nómina:");
+                    cant=Entrada.nextInt();
+                    ofi.generarNomina(id, mes, anio, cant);
+                    
+                    break;
+
+                case 9:
                     salir = true;
                     break;
             }
