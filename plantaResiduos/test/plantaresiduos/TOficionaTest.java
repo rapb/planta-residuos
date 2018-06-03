@@ -47,7 +47,7 @@ public class TOficionaTest {
         int mes = 0;
         int anio = 0;
         int cant = 0;
-        TOficiona instance = null;
+        TOficina instance = null;
         instance.generarNomina(id, mes, anio, cant);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
