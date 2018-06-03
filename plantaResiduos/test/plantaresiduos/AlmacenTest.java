@@ -286,7 +286,7 @@ public class AlmacenTest {
      * Test of anhadirVehiculo method, of class Almacen.
      */
     @Test
-    public void testAnhadirVehiculo() {
+    public void testAnhadirVehiculo() throws Exception {
         System.out.println("anhadirVehiculo");
         String matricula = "";
         String modelo = "";
@@ -303,7 +303,7 @@ public class AlmacenTest {
      * Test of anhadirtrabajadorObrero method, of class Almacen.
      */
     @Test
-    public void testAnhadirtrabajadorObrero() {
+    public void testAnhadirtrabajadorObrero() throws Exception {
         System.out.println("anhadirtrabajadorObrero");
         String nif = "";
         String nombre = "";
@@ -312,7 +312,7 @@ public class AlmacenTest {
         String direccion = "";
         boolean esSupervisor = false;
         Almacen instance = null;
-        instance.anhadirtrabajadorObrero(nif, nombre, apellidos, telefono, direccion, esSupervisor);
+        instance.anhadirTrabajadorObrero(nif, nombre, apellidos, telefono, direccion, esSupervisor);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -321,7 +321,7 @@ public class AlmacenTest {
      * Test of anhadirtrabajadorCamionero method, of class Almacen.
      */
     @Test
-    public void testAnhadirtrabajadorCamionero() {
+    public void testAnhadirtrabajadorCamionero() throws Exception {
         System.out.println("anhadirtrabajadorCamionero");
         boolean senior = false;
         String nif = "";
@@ -330,7 +330,7 @@ public class AlmacenTest {
         String telefono = "";
         String direccion = "";
         Almacen instance = null;
-        instance.anhadirtrabajadorCamionero(senior, nif, nombre, apellidos, telefono, direccion);
+        instance.anhadirTrabajadorCamionero(senior, nif, nombre, apellidos, telefono, direccion);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -339,7 +339,7 @@ public class AlmacenTest {
      * Test of anhadirtrabajadorOficina method, of class Almacen.
      */
     @Test
-    public void testAnhadirtrabajadorOficina() {
+    public void testAnhadirtrabajadorOficina() throws Exception {
         System.out.println("anhadirtrabajadorOficina");
         String nif = "";
         String nombre = "";
@@ -348,7 +348,7 @@ public class AlmacenTest {
         String direccion = "";
         String departamento = "";
         Almacen instance = null;
-        instance.anhadirtrabajadorOficina(nif, nombre, apellidos, telefono, direccion, departamento);
+        instance.anhadirTrabajadorOficina(nif, nombre, apellidos, telefono, direccion, departamento);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
