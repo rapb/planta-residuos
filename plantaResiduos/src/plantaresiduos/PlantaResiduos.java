@@ -42,6 +42,8 @@ public class PlantaResiduos {
         Scanner Entrada = new Scanner(System.in);
         PlantaResiduos p = new PlantaResiduos();
         Almacen a = new Almacen(1, 100, "Almacen 1", "Torrelavega");
+        Taller t1=new Taller("Taller 1");
+        Taller t2=new Taller("Taller 2");
 
         boolean salir = false;
         int elec = 0;
@@ -52,10 +54,10 @@ public class PlantaResiduos {
             System.out.println("1. Introducir residuo.");
             System.out.println("2. Reparar residuo.");
             System.out.println("3. Listar residuos.");
-            System.out.println("4 añadir trabajador");
-            System.out.println("5.añadir vehiculo");
-            System.out.println("6.asignar vehiculo a camionero");
-            System.out.println("7.asignar camionero a vehiculo");
+            System.out.println("4. Añadir trabajador");
+            System.out.println("5. Añadir vehiculo");
+            System.out.println("6. Asignar vehiculo a camionero");
+            System.out.println("7. Asignar camionero a vehiculo");
             System.out.println("8. Salir.");
             System.out.println("Seleccione una opción.");
 
@@ -87,22 +89,35 @@ public class PlantaResiduos {
                     a.anadirResiduo(id, estado, desc);
                     break;
                 case 2:
-
+                    System.out.println("¿En que taller va a reparar el residuo?");
+                    System.out.println("¿T1 / T2?");
+                    String tallerRep=Entrada.next();
+                    if(tallerRep.equalsIgnoreCase("t1")){
+                        System.out.println("Introduzca el id del residuo");
+                        int resid=Entrada.nextInt();
+                        t1.reparar(resid);
+                    }
+                    else if(tallerRep.equalsIgnoreCase("t2")){
+                        System.out.println("Introduzca el id del residuo");
+                        int resid=Entrada.nextInt();
+                        t2.reparar(resid);
+                    }
+                    else System.out.println("Esa opción no es correcta.");
                     break;
                 case 3:
                     a.listarResiduos();
                     break;
                 case 4:
-                    //  a.
+                        
                     break;
                 case 5:
-                    System.out.println("dime la matricula del vehiculo");
+                    System.out.println("Dime la matrícula del vehículo:");
                     matricula = Entrada.next();
-                    System.out.println("dime el modelo del vehiculo");
+                    System.out.println("Dime el modelo del vehículo:");
                     modelo = Entrada.next();
-                    System.out.println("dime los años que lleva operatvo");
+                    System.out.println("Dime los años que lleva operativo:");
                     numeroAñosOperativo = Entrada.nextInt();
-                    System.out.println("¿el vehiculo esta disponible?");
+                    System.out.println("¿El vehículo está disponible? [si/no]");
                     resp = Entrada.next();
                     if (resp.equalsIgnoreCase("si")) {
                         disponible = true;
@@ -113,16 +128,16 @@ public class PlantaResiduos {
 
                     break;
                 case 6:
-                    System.out.println("dime la matricula del vehiculo");
+                    System.out.println("Dime la matricula del vehículo:");
                     matricula = Entrada.next();
-                    System.out.println("dime el nif del camionero");
+                    System.out.println("Dime el nif del camionero:");
                     nif = Entrada.next();
                     a.asignaVehiculoConductor(nif, matricula);
                     break;
                 case 7:
-                    System.out.println("dime la matricula del vehiculo");
+                    System.out.println("Dime la matricula del vehículo:");
                     matricula = Entrada.next();
-                    System.out.println("dime el nif del camionero");
+                    System.out.println("Dime el nif del camionero:");
                     nif = Entrada.next();
                     a.asignarConductorVehiculo(nif, matricula);
 
