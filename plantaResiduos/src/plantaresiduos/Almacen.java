@@ -23,7 +23,7 @@ public class Almacen {
     private String nombre, ubicacion;
     public LinkedHashSet<Residuo> residuos;
     private HashSet<Trabajador> trabajadores;
-private HashSet<Vehiculo> vehiculos;
+    private HashSet<Vehiculo> vehiculos;
     /**
      * Constructor de almacen.
      * @param id - identificador del almancen.
@@ -32,7 +32,7 @@ private HashSet<Vehiculo> vehiculos;
      * @param ubicacion - ubicación del almacen.
      */
     public Almacen(int id, int capacidad, String nombre, String ubicacion) throws Exception {
-         if(id<0){
+        if(id<0){
             throw new Exception("El id ha de ser mayor de 0.");
         } else this.id = id;
         if (capacidad>200){
@@ -42,14 +42,14 @@ private HashSet<Vehiculo> vehiculos;
         if (nombre.length()>20){
             throw new Exception("El nombre no puede tener mas de 20 caracteres");
         }
-        else this.nombre = ubicacion;
+        else this.nombre = nombre;
         if (this.ubicacion.length()>20){
             throw new Exception("La ubicación no puede tener mas de 20 caracteres");
         }
         else this.ubicacion= ubicacion;
         residuos=new LinkedHashSet<>();
-           trabajadores=new HashSet<>();
-         vehiculos=new HashSet<>();
+        trabajadores=new HashSet<>();
+        vehiculos=new HashSet<>();
     }
     /**
      * Método para añadir residuos al almacen.
