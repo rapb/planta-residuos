@@ -108,7 +108,53 @@ public class PlantaResiduos {
                     a.listarResiduos();
                     break;
                 case 4:
-                        
+                    System.out.println("Introduzca el nif:");
+                    String n=Entrada.next();
+                    System.out.println("Introduzca el nombre:");
+                    String no=Entrada.next();
+                    System.out.println("Introduzca los apellidos:");
+                    String ape=Entrada.nextLine();
+                    System.out.println("Introduzca el teléfono:");
+                    String tel=Entrada.next();
+                    System.out.println("Introduzca la dirección:");
+                    String dir=Entrada.nextLine();
+                    System.out.println("¿A que departamento pertenece el trabajador?");
+                    System.out.println("1. Obrero");
+                    System.out.println("2. Camionero");
+                    System.out.println("3. Oficinista");
+                    int depart=Entrada.nextInt();
+                    switch(depart){
+                        case 1:
+                            System.out.println("¿El obrero es supervisor?");
+                            resp = Entrada.next();
+                            boolean superv;
+                            if (resp.equalsIgnoreCase("si")) {
+                                superv = true;
+                            } else {
+                                superv = false;
+                            }
+                            a.anhadirTrabajadorObrero(n, no, ape, tel, dir, superv);
+                            break;
+                        case 2:
+                            System.out.println("¿El camionero es senior?");
+                            resp = Entrada.next();
+                            boolean senior;
+                            if (resp.equalsIgnoreCase("si")) {
+                                senior = true;
+                            } else {
+                                senior = false;
+                            }
+                            a.anhadirTrabajadorCamionero(senior, n, no, ape, tel, dir);
+                            break;
+                        case 3:
+                            System.out.println("¿A qué departamento pertenece el oficinista?");
+                            String departamento=Entrada.nextLine();
+                            a.anhadirTrabajadorOficina(n, no, ape, tel, dir, departamento);
+                            break;
+                        default:
+                            System.out.println("Es posible que esa opción no sea correcta.");
+                    }
+                    
                     break;
                 case 5:
                     System.out.println("Dime la matrícula del vehículo:");
