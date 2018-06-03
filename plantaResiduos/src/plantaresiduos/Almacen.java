@@ -150,13 +150,13 @@ public class Almacen {
     public void anhadirVehiculo(String matricula, String modelo, int numeroAñosOperativo, int estado, boolean disponible) throws Exception{
         vehiculos.add(new Vehiculo(matricula, modelo, numeroAñosOperativo,estado, disponible));
     }
-    public void anhadirtrabajadorObrero(String nif, String nombre, String apellidos, String telefono, String direccion, boolean esSupervisor) throws Exception{
+    public void anhadirTrabajadorObrero(String nif, String nombre, String apellidos, String telefono, String direccion, boolean esSupervisor) throws Exception{
         trabajadores.add(new TObrero(nif, nombre,apellidos,telefono, direccion,esSupervisor));
     }
-    public void anhadirtrabajadorCamionero(boolean senior, String nif, String nombre, String apellidos, String telefono, String direccion) throws Exception{
+    public void anhadirTrabajadorCamionero(boolean senior, String nif, String nombre, String apellidos, String telefono, String direccion) throws Exception{
         trabajadores.add(new TCamionero(senior,nif,nombre,apellidos,telefono, direccion));
     }
-    public void anhadirtrabajadorOficina(String nif, String nombre, String apellidos, String telefono, String direccion, String departamento) throws Exception{
+    public void anhadirTrabajadorOficina(String nif, String nombre, String apellidos, String telefono, String direccion, String departamento) throws Exception{
         trabajadores.add(new TOficiona(nif,nombre,apellidos,telefono,direccion,departamento));
     }
     public Trabajador buscarTrabajador(String nif){
